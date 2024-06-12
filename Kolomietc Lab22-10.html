@@ -1,0 +1,26 @@
+function processArray(arr) {
+    // Функція для перевірки, чи є значення числом
+    function isNumber(value) {
+        return typeof value === 'number' && !isNaN(value);
+    }
+
+    // Створення копії масиву і перевертання його
+    const reversedArray = [...arr].reverse();
+
+    // Проходження по кожному елементу масиву і застосування умов
+    for (let i = 0; i < reversedArray.length; i++) {
+        if (isNumber(reversedArray[i])) {
+            reversedArray[i] = reversedArray[i] ** 2; // Піднесення до квадрату
+        }
+        // Інші значення залишаються без змін
+    }
+
+    return reversedArray;
+}
+
+// Приклад використання функції
+const inputArray = [1, 'apple', 3, 'banana', 5];
+const processedArray = processArray(inputArray);
+
+console.log('Початковий масив:', inputArray);
+console.log('Опрацьований масив:', processedArray);

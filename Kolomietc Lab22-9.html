@@ -1,0 +1,43 @@
+function analyzeNumber(num) {
+    // Визначення, чи є число позитивним або негативним
+    if (num > 0) {
+        console.log(`${num} є позитивним числом`);
+    } else if (num < 0) {
+        console.log(`${num} є негативним числом`);
+    } else {
+        console.log(`${num} є нулем`);
+    }
+
+    // Визначення, чи є число простим
+    let isPrime = true;
+    if (num === 1 || num === 0) {
+        isPrime = false;
+    } else {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    if (isPrime) {
+        console.log(`${num} є простим числом`);
+    } else {
+        console.log(`${num} не є простим числом`);
+    }
+
+    // Визначення, чи ділиться число на 2, 5, 3, 6, 9 без залишку
+    const divisors = [2, 5, 3, 6, 9];
+    divisors.forEach(divisor => {
+        if (num % divisor === 0) {
+            console.log(`${num} ділиться на ${divisor} без залишку`);
+        } else {
+            console.log(`${num} не ділиться на ${divisor} без залишку`);
+        }
+    });
+}
+
+// Приклад використання функції
+analyzeNumber(7); // Позитивне, просте, не ділиться на 2, 5, 3, 6, 9
+analyzeNumber(-12); // Негативне, не просте, ділиться на 2, 3, 6 без залишку
+analyzeNumber(17); // Позитивне, просте, не ділиться на 2, 5, 3, 6, 9

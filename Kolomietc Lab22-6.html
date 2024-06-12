@@ -1,0 +1,33 @@
+function operateArray(arr) {
+    // Знайти найбільше значення масиву
+    const max = Math.max(...arr);
+
+    // Знайти найменше значення масиву
+    const min = Math.min(...arr);
+
+    // Знайти загальну суму елементів масиву
+    const sum = arr.reduce((acc, curr) => acc + curr, 0);
+
+    // Знайти середнє арифметичне всіх елементів масиву
+    const average = sum / arr.length;
+
+    // Вивести непарні значення масиву
+    const oddValues = arr.filter(num => num % 2 !== 0);
+
+    // Вивести результати
+    console.log('Найбільше значення масиву:', max);
+    console.log('Найменше значення масиву:', min);
+    console.log('Загальна сума елементів масиву:', sum);
+    console.log('Середнє арифметичне всіх елементів масиву:', average);
+    console.log('Непарні значення масиву:', oddValues);
+}
+
+// Створити масив розмірністю N з довільними цілими значеннями
+const N = 10; // Задаємо розмір масиву
+const array = [];
+for (let i = 0; i < N; i++) {
+    array.push(Math.floor(Math.random() * 100)); // Генеруємо випадкові цілі числа від 0 до 99
+}
+
+// Виклик функції для обробки масиву
+operateArray(array);

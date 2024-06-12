@@ -1,0 +1,12 @@
+function removeDuplicates(arr) {
+    // Використовуємо Set для зберігання унікальних значень
+    const uniqueArray = Array.from(new Set(arr));
+    return uniqueArray;
+}
+
+// Приклад використання функції
+const inputArray = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+const uniqueArray = removeDuplicates(inputArray);
+
+console.log('Початковий масив:', inputArray);
+console.log('Масив без дублікатів:', uniqueArray);

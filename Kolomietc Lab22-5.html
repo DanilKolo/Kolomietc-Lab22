@@ -1,0 +1,8 @@
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0;
+}
+
+// Приклади використання:
+console.log(isDivisible(12, 3, 4)); // Поверне true, оскільки 12 ділиться на 3 і 4
+console.log(isDivisible(12, 2, 6)); // Поверне false, оскільки 12 не ділиться на 6 (хоча ділиться на 2)
+console.log(isDivisible(10, 2, 5)); // Поверне true, оскільки 10 ділиться як на 2, так і на 5
